@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/Norikhsan/xiaomi_recovery_ruby.git -B android-12-1'
+        default: 'https://github.com/Norikhsan/xiaomi_recovery_ruby.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
@@ -155,10 +155,10 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: | 
-          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}.img
-          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
-        name: ${{ github.event.inputs.DEVICE_NAME }}-${{ github.run_id }}
-        tag_name: ${{ github.run_id }}
+          workspace/out/target/product/ruby/boot.img
+          workspace/out/target/product/ruby/twrp_3.7.0_12.1-ruby.zip
+        name: TWRP_12.1
+        tag_name: TWRP_RUBY
         body: |
           Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
           Device: ${{ github.event.inputs.DEVICE_NAME }}
