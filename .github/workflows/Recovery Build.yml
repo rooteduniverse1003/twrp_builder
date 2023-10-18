@@ -14,15 +14,15 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/Norikhsan/device_xiaomi_seL.git'
+        default: 'https://github.com/Norikhsan/xiaomi_recovery_anu.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'TWRP'
+        default: 'recovery'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/xiaomi/selene'
+        default: 'device/xiaomi/ruby'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -32,11 +32,11 @@ on:
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'selene'
+        default: 'ruby'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'twrp_selene'
+        default: 'twrp_ruby'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
